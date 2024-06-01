@@ -1,0 +1,82 @@
+@use "../utils" as *;
+
+.footer {
+  background: #fff;
+  color: black;
+  padding: 2% 10%;
+  li {
+    cursor: pointer;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__first {
+    max-width: 25%;
+    margin-right: 2rem;
+
+    &--logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    &--desc {
+      margin-bottom: 1rem;
+    }
+
+    &--links ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e3e3e3;
+        padding: 2px 4px;
+        border-radius: 2rem;
+        &:hover {
+          background: linear-gradient(45deg, $gradient);
+        }
+
+        i {
+          border-radius: 2rem;
+          border-radius: 2rem;
+          font-size: 1.5rem;
+          color: black;
+        }
+      }
+    }
+  }
+
+  &__second {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.5rem;
+    justify-content: space-around;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 1rem;
+      transition: all 0.25s ease-in-out;
+
+      li {
+        position: relative;
+        &:hover {
+          transition: all 0.25s ease-in-out;
+          @include underlineAnimation;
+        }
+        margin: 0.5rem 0;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+  }
+}

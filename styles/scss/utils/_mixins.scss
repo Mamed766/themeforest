@@ -1,0 +1,63 @@
+@use "./colors" as *;
+
+@mixin mainBtn {
+  background-color: $nav-btn;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 8px 16px;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@mixin postBtn {
+  padding: 4px 8px;
+  border-radius: 0.8rem;
+  outline: none;
+  border: 1px solid #e3e3e3;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    background-color: #cfbbc7;
+    color: black;
+  }
+}
+
+@mixin underlineAnimation {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: linear-gradient(45deg, $gradient);
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+    right: 0;
+  }
+}
+
+@mixin btn {
+  outline: none;
+  background: linear-gradient(45deg, $gradient);
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 0.8rem;
+  padding: 8px 16px;
+}
+
+@mixin flex($display: null, $direction: null, $content: null, $items: null) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $items;
+}

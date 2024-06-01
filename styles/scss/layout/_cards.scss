@@ -1,0 +1,67 @@
+@use "../utils" as *;
+.cards {
+  padding: 2% 10%;
+  img {
+    cursor: pointer;
+  }
+
+  gap: 2rem;
+
+  &--btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    button {
+      transition: all 0.25s ease-in-out;
+
+      @include btn;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    grid-column: 1/-1;
+  }
+  &--card {
+    border: 1px solid #e3e3e3;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: all 0.25s ease-in-out;
+    width: 100%;
+
+    &:hover {
+      border-color: $blue;
+    }
+
+    button {
+      @include postBtn;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      align-items: start;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      img {
+        border-radius: 2rem;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    &__img {
+      img {
+        border-radius: 2rem;
+        object-fit: cover;
+        width: 100%;
+        height: 20rem;
+      }
+    }
+  }
+}

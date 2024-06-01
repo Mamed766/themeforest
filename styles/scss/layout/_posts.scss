@@ -1,0 +1,118 @@
+@use "../utils" as *;
+
+.posts {
+  padding: 0 5%;
+  img {
+    cursor: pointer;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    button {
+      @include postBtn;
+    }
+
+    &--first {
+      transition: all 0.25s ease-in-out;
+
+      padding: 1rem 1rem;
+      border-radius: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e3e3e3;
+      &:hover {
+        border-radius: 20px;
+        border-color: $blue;
+        border-width: 1px;
+      }
+
+      font-size: 18px;
+      &__img {
+        img {
+          border-radius: 0.8rem;
+          height: 30rem;
+          width: 100%;
+          object-fit: cover;
+          //   width: 50rem;
+        }
+      }
+
+      &__end {
+        display: flex;
+
+        margin-top: 5%;
+        gap: 0.5rem;
+
+        &--end {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        img {
+          object-fit: cover;
+          border-radius: 2rem;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+
+    &--second {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      &__post {
+        // display: flex;
+        // flex-wrap: wrap;
+        padding: 1rem 2rem;
+        border-radius: 0.8rem;
+        border: 1px solid #e3e3e3;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+          border-color: $blue;
+        }
+        &--img {
+          gap: 0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          &__content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          button {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      img {
+        border-radius: 0.8rem;
+        object-fit: cover;
+        height: 10rem;
+        width: 20rem;
+        &.custimg {
+          width: 30rem;
+        }
+      }
+    }
+  }
+}

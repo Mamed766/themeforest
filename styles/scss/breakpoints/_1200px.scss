@@ -1,0 +1,77 @@
+@media screen and (max-width: 1200px) {
+  .header {
+    &__nav {
+      &--first {
+        &__content {
+          display: none;
+        }
+      }
+
+      &--second {
+        &__content {
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .sign {
+    display: none;
+  }
+
+  .hide {
+    display: block;
+  }
+
+  // Posts
+
+  .posts {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      img {
+        border-radius: 0.8rem;
+        object-fit: cover;
+        height: 10rem;
+        width: 70%;
+        &.custimg {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // form
+
+  .subs {
+    & > div {
+      flex-direction: column;
+      height: 50rem;
+    }
+
+    &--second {
+      &__form {
+        padding: 0.8rem 1.6rem;
+      }
+    }
+  }
+
+  // footer
+  .footer {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    &__second {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}

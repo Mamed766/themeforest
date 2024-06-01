@@ -1,0 +1,60 @@
+@use "../utils" as *;
+
+.subs {
+  width: 100%;
+  padding: 2% 10%;
+
+  & > div {
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    gap: 5rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    background: linear-gradient(45deg, $gradient);
+  }
+
+  &--first {
+    overflow: hidden;
+
+    color: white;
+    h2 {
+      font-size: 32px;
+    }
+  }
+
+  &--second {
+    &__form {
+      background-color: #a955fc;
+      padding: 2rem 4rem;
+      border: 1px solid #e3e3e3;
+      border-radius: 0.8rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+
+      input {
+        padding: 0.5rem 0.5rem;
+        width: 20rem;
+        border-radius: 2rem;
+        outline: none;
+        border: 1px solid transparent;
+      }
+      input[type="submit"] {
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      gap: 0.5rem;
+    }
+  }
+}
