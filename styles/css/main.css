@@ -247,6 +247,23 @@ button {
   display: none;
 }
 
+.sticky {
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  color: white;
+  background-color: #215dee;
+  transform-origin: right;
+  top: 15rem;
+  right: 20px;
+}
+.sticky {
+  transform: rotate(90deg);
+}
+
 .greet {
   height: 70vh;
   font-weight: 700;

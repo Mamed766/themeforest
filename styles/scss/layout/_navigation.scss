@@ -115,3 +115,21 @@
 .hide {
   display: none;
 }
+
+.sticky {
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  color: white;
+  background-color: #215dee;
+
+  & {
+    transform: rotate(90deg);
+  }
+  transform-origin: right;
+  top: 15rem;
+  right: 20px;
+}
