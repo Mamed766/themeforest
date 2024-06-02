@@ -10,6 +10,10 @@ button {
   cursor: pointer;
 }
 
+body {
+  background: linear-gradient(to bottom right, #d4ccfc, #fff, #d4ccfc);
+}
+
 .footer {
   background: #fff;
   color: black;
