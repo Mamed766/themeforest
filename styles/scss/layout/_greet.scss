@@ -12,13 +12,14 @@
   }
   font-weight: 700;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  gap: 2rem;
+  @include flexible(
+    $wrap: wrap,
+    $direction: column,
+    $justify: center,
+    $items: center,
+    $gap: 2rem
+  );
 
   button {
     @include btn;

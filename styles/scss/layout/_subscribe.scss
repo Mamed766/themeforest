@@ -7,11 +7,9 @@
   & > div {
     padding: 1rem 2rem;
     border-radius: 0.8rem;
-    display: flex;
-    gap: 5rem;
-    height: 10rem;
-    justify-content: center;
-    align-items: center;
+
+    @include flexible($justify: center, $items: center, $gap: 5rem);
+
     height: 20rem;
     background: linear-gradient(45deg, $gradient);
   }
@@ -32,10 +30,7 @@
       border: 1px solid #e3e3e3;
       border-radius: 0.8rem;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-self: center;
+      @include flexible($direction: column, $justify: center, $gap: 0.5rem);
 
       input {
         padding: 0.5rem 0.5rem;
@@ -53,8 +48,6 @@
           opacity: 0.8;
         }
       }
-
-      gap: 0.5rem;
     }
   }
 }

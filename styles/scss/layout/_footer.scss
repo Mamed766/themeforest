@@ -8,9 +8,7 @@
     cursor: pointer;
   }
   &__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flexible($wrap: wrap, $justify: space-between);
   }
 
   &__first {
@@ -33,9 +31,7 @@
       gap: 1rem;
 
       li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexible($justify: center, $items: center);
         background-color: #e3e3e3;
         padding: 2px 4px;
         border-radius: 2rem;
@@ -54,10 +50,7 @@
   }
 
   &__second {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4.5rem;
-    justify-content: space-around;
+    @include flexible($wrap: wrap, $justify: space-around, $gap: 4.5rem);
 
     ul {
       list-style: none;

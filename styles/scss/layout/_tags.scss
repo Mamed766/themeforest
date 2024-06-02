@@ -7,8 +7,6 @@
     margin-bottom: 1rem;
   }
   &__container {
-    align-content: center;
-    justify-self: center;
     gap: 2rem;
 
     img {
@@ -24,12 +22,9 @@
       }
       cursor: pointer;
 
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      @include flexible(center, center, wrap, 1.5rem);
+
       padding: 0.5rem 0.5rem;
-      gap: 1.5rem;
       border: 1px solid #e3e3e3;
       border-radius: 2rem;
 

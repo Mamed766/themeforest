@@ -8,9 +8,8 @@
   gap: 2rem;
 
   &--btn {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flexible($justify: center, $items: flex-start);
+
     button {
       transition: all 0.25s ease-in-out;
 
@@ -46,16 +45,15 @@
     }
 
     &__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.5rem;
-      align-items: start;
+      @include flexible(
+        $direction: column,
+        $justify: center,
+        $gap: 0.5rem,
+        $items: start
+      );
+
       div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
+        @include flexible($justify: center, $items: center, $gap: 0.5rem);
       }
       img {
         border-radius: 2rem;

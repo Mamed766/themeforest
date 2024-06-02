@@ -1,3 +1,5 @@
+@use "../utils" as *;
+
 @media screen and (max-width: 1200px) {
   .header {
     &__nav {
@@ -29,9 +31,7 @@
 
   .posts {
     &__content {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      @include flexible($direction: column, $wrap: wrap);
 
       &--second {
         img {
@@ -65,16 +65,16 @@
   // footer
   .footer {
     &__container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-      align-items: flex-start;
+      @include flexible(
+        $direction: column,
+        $justify: center,
+        $items: flex-start,
+        $gap: 2rem
+      );
     }
 
     &__second {
-      justify-content: flex-start;
-      align-items: flex-start;
+      @include flexible($justify: flex-start, $items: flex-start);
     }
   }
 }

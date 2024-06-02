@@ -20,17 +20,15 @@
 
   &__nav {
     padding: 7rem 10% 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    @include flexible($justify: space-between, $items: center);
     &--first {
       &__logo {
         cursor: pointer;
       }
 
-      align-items: center;
-      display: flex;
-      gap: 2.5rem;
+      @include flexible($items: center, $gap: 2.5rem);
+
       &__content {
         position: relative;
 
@@ -50,9 +48,9 @@
 
           &:hover .header__nav--first__content--hover {
             width: 15rem;
-            display: flex;
-            gap: 0.9rem;
-            flex-direction: column;
+
+            @include flexible($direction: column, $gap: 0.9rem);
+
             padding-top: 2rem;
             li {
               padding: 0 0 0.5rem 0.5rem;
@@ -75,21 +73,17 @@
         }
 
         cursor: pointer;
-        display: flex;
-        flex-direction: row;
-        gap: 1.5rem;
+
+        @include flexible($direction: row, $gap: 1.5rem);
         list-style: none;
       }
     }
 
     &--second {
       &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexible($justify: center, $items: center, $gap: 1rem);
 
         cursor: pointer;
-        gap: 1rem;
         list-style: none;
         i:hover {
           color: $blue;
@@ -119,10 +113,12 @@
 .sticky {
   cursor: pointer;
   position: fixed;
-  display: flex;
-  flex-direction: column;
+
+  @include flexible($direction: column);
+
   padding: 0.5rem 1rem;
   border-radius: 0.8rem;
+
   color: white;
   background-color: #215dee;
 

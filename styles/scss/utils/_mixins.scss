@@ -27,6 +27,21 @@
   }
 }
 
+@mixin flexible(
+  $justify: null,
+  $items: null,
+  $wrap: null,
+  $gap: null,
+  $direction: null
+) {
+  display: flex;
+  align-items: $items;
+  flex-wrap: $wrap;
+  gap: $gap;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
 @mixin underlineAnimation {
   &::after {
     content: "";
