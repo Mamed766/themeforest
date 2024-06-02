@@ -469,6 +469,8 @@ button {
   color: white;
   border-radius: 0.8rem;
   padding: 8px 16px;
+  padding: 20px 40px;
+  border-radius: 2rem;
 }
 .cards--btn button:hover {
   opacity: 0.8;
@@ -479,6 +481,25 @@ button {
   border-radius: 2rem;
   transition: all 0.25s ease-in-out;
   width: 100%;
+}
+.cards--card h2 span {
+  cursor: pointer;
+  position: relative;
+}
+.cards--card h2 span::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: linear-gradient(45deg, #3654f0, #6240f5, #723af7, #9c28fc);
+  transition: all 0.4s ease-in-out;
+}
+.cards--card h2 span:hover::after {
+  width: 100%;
+  right: 0;
 }
 .cards--card:hover {
   border-color: #3654f0;
