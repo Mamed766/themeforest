@@ -587,13 +587,13 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .posts__content img {
+  .posts__content--second img {
     border-radius: 0.8rem;
     object-fit: cover;
     height: 10rem;
     width: 70%;
   }
-  .posts__content img.custimg {
+  .posts__content--second img.custimg {
     width: 100%;
   }
   .subs > div {

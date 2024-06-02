@@ -32,13 +32,16 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      img {
-        border-radius: 0.8rem;
-        object-fit: cover;
-        height: 10rem;
-        width: 70%;
-        &.custimg {
-          width: 100%;
+
+      &--second {
+        img {
+          border-radius: 0.8rem;
+          object-fit: cover;
+          height: 10rem;
+          width: 70%;
+          &.custimg {
+            width: 100%;
+          }
         }
       }
     }
