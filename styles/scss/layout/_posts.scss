@@ -21,6 +21,18 @@
       @include postBtn;
     }
 
+    h2 span {
+      cursor: pointer;
+      position: relative;
+      @include underlineAnimation;
+    }
+
+    p span {
+      cursor: pointer;
+      position: relative;
+      @include underlineAnimation;
+    }
+
     &--first {
       transition: all 0.25s ease-in-out;
 
@@ -95,6 +107,7 @@
             align-items: flex-start;
           }
           p {
+            line-height: 1.8;
             font-size: 16px;
             font-weight: 600;
           }
