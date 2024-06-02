@@ -1,6 +1,7 @@
 @use "../utils" as *;
+@use "../base" as *;
 .cards {
-  padding: 2% 10%;
+  padding: $default-padding;
   img {
     cursor: pointer;
   }
@@ -14,8 +15,8 @@
       transition: all 0.25s ease-in-out;
 
       @include btn;
-      padding: 20px 40px;
-      border-radius: 2rem;
+      padding: $pad-xl;
+      border-radius: $default-rad;
       &:hover {
         opacity: 0.8;
       }
@@ -23,9 +24,9 @@
     grid-column: 1/-1;
   }
   &--card {
-    border: 1px solid #e3e3e3;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
+    border: 1px solid $gray;
+    padding: $pad-sm;
+    border-radius: $default-rad;
     transition: all 0.25s ease-in-out;
     width: 100%;
 
@@ -56,7 +57,7 @@
         @include flexible($justify: center, $items: center, $gap: 0.5rem);
       }
       img {
-        border-radius: 2rem;
+        border-radius: $default-rad;
         height: 2rem;
         width: 2rem;
       }
@@ -64,7 +65,7 @@
 
     &__img {
       img {
-        border-radius: 2rem;
+        border-radius: $default-rad;
         object-fit: cover;
         width: 100%;
         height: 20rem;

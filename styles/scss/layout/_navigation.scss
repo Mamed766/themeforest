@@ -1,9 +1,9 @@
 @use "../utils" as *;
-
+@use "../base" as *;
 .header {
   &__main--nav {
     position: fixed;
-    padding: 1% 1%;
+    padding: $pad-header;
     background-color: $nav-bg;
     @include flex(flex, null, space-between, center);
 
@@ -34,7 +34,7 @@
 
         &--hover {
           // background-color: #e3e3e3;
-          border-radius: 0.5rem;
+          border-radius: $sm-rad;
           position: absolute;
           top: 100%;
           left: 0;
@@ -117,7 +117,7 @@
   @include flexible($direction: column);
 
   padding: 0.5rem 1rem;
-  border-radius: 0.8rem;
+  border-radius: $md-rad;
 
   color: white;
   background-color: #215dee;

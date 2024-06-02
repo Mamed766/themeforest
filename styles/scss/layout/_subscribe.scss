@@ -1,12 +1,13 @@
 @use "../utils" as *;
+@use "../base" as *;
 
 .subs {
   width: 100%;
-  padding: 2% 10%;
+  padding: $default-padding;
 
   & > div {
-    padding: 1rem 2rem;
-    border-radius: 0.8rem;
+    padding: $pad-sm;
+    border-radius: $md-rad;
 
     @include flexible($justify: center, $items: center, $gap: 5rem);
 
@@ -28,14 +29,14 @@
       background-color: #a955fc;
       padding: 2rem 4rem;
       border: 1px solid #e3e3e3;
-      border-radius: 0.8rem;
+      border-radius: $md-rad;
 
       @include flexible($direction: column, $justify: center, $gap: 0.5rem);
 
       input {
         padding: 0.5rem 0.5rem;
         width: 20rem;
-        border-radius: 2rem;
+        border-radius: $default-rad;
         outline: none;
         border: 1px solid transparent;
       }

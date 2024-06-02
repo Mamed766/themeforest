@@ -1,9 +1,9 @@
 @use "../utils" as *;
-
+@use "../base" as *;
 .footer {
-  background: #fff;
-  color: black;
-  padding: 2% 10%;
+  background: $white;
+  color: $black;
+  padding: $default-padding;
   li {
     cursor: pointer;
   }
@@ -32,16 +32,15 @@
 
       li {
         @include flexible($justify: center, $items: center);
-        background-color: #e3e3e3;
-        padding: 2px 4px;
-        border-radius: 2rem;
+        background-color: $gray;
+        padding: $pad-v-sm;
+        border-radius: $default-rad;
         &:hover {
           background: linear-gradient(45deg, $gradient);
         }
 
         i {
-          border-radius: 2rem;
-          border-radius: 2rem;
+          border-radius: $default-rad;
           font-size: 1.5rem;
           color: black;
         }
